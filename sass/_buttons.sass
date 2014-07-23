@@ -1,0 +1,69 @@
+// buttons
+=btn
+	height: 35px
+	line-height: 35px
+	background: #be8145
+	display: inline-block
+	+border-radius(18px)
+	+transition(all .1s linear)
+	span
+		padding: 10px 28px 6px
+		width: 100%
+		height: 30px
+		color: $black
+		line-height: 1
+		+ofbook
+		+fs(15)
+		text-align: center
+		vertical-align: top
+		+box-shadow(0 0 0 1px rgba(255,255,255,.5))
+		border-top: none
+		+border-radius(16px)
+		background-color: #fbef03
+		+background-image(linear-gradient(bottom, #ffba00 0%, #fbef03 100%))
+		display: inline-block
+		+box
+	&:hover
+		background: darken(#be8145, 5)
+	&:active
+		span
+			+box-shadow(inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05))
+.btn
+	+btn
+	[class^="icon_"], [class*=" icon_"]
+		margin-right: 10px
+	&.btn_large
+		height: 60px
+		line-height: 60px
+		padding: 0 60px
+		font-size: 16px
+	&.btn_small
+		height: 17px
+		line-height: 17px
+		padding: 0 8px
+		font-size: 11px
+	&.btn_primary
+		background: $blue
+		&:hover
+			background: darken($blue, 5)
+	&.btn_empty
+		background: transparent
+		border: 1px solid #e1e1e1
+		color: $dark
+		span
+			color: #666
+		&.is-active, &:hover
+			color: #fff
+			background: $blue
+			border: 1px solid $blue
+			span
+				color: #a4cfe3
+	&.btn_grey
+		height: 20px
+		line-height: 20px
+		font-size: 10px
+		background: $darkgrey
+		padding: 0 10px
+		+br(10px)
+		&:hover
+			background: darken($darkgrey, 5)

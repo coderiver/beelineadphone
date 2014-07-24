@@ -1,6 +1,5 @@
 // header
 .header
-	height: 108px
 	color: #333333
 	+fs(12)
 	line-height: 108px
@@ -12,14 +11,71 @@
 		position: relative
 		max-width: 980px
 		margin: 0 auto
-		padding: 0 10px 0 0
 		+clr
-	.header-line
-		position: absolute
-		right: 100%
-		width: 1000px
-		height: 60px
-		background: #00ade6
+	.header__top
+		height: 44px
+		line-height: 44px
+		background: #282828
+		border-top: 1px solid #787878
+		+clr
+	.language
+		float: left
+		width: 45px
+		height: 100%
+		color: #666666
+		font-size: 13px
+		border-right: 1px solid #787878
+		text-transform: uppercase
+		font-size: 8px
+		font-family: Arial, sans-serif
+		cursor: pointer
+		.language__item
+			display: none
+			&.is-active
+				display: block
+		.language__ico
+			margin-right: 5px
+			display: inline-block
+		.language__ico_ru
+			+s(ru-flag)
+	.header__cabinet
+		float: right
+	.cabinet
+		.cabinet__item
+			height: 100%
+			padding-left: 32px
+			display: inline-block
+			&:first-child
+				padding-right: 12px
+				border-right: 1px solid #787878
+		.cabinet__btn
+			position: relative
+			line-height: 1.1
+			color: $white
+			font-size: 12px
+			background: none
+			border: none
+			border-bottom: 1px solid #ababab
+			display: inline-block
+			+hn
+			&:focus
+				outline: none
+			&:hover
+				border: none
+		.cabinet__btn_question
+			.cabinet__ico
+				left: -28px
+				+s(ico-question)
+		.cabinet__btn_personally 
+			border-bottom: 1px dashed $white
+			.cabinet__ico
+				left: -20px
+				+s(ico-personally)
+		.cabinet__ico
+			position: absolute
+			top: 50%
+			margin-top: -12px
+			display: inline-block
 	.header__logo
 		float: left
 		margin-top: 34px
@@ -41,74 +97,6 @@
 	.header__toolbar
 		float: right
 		text-align: right
-	// .divider
-	// 	position: relative
-	// 	display: inline-block
-	// 	vertical-align: top
-	// 	padding-left: 20px
-	// 	padding-right: 20px
-	// 	height: 70px
-	// 	line-height: 70px
-	// 	border-left: 1px solid #ddd
-	// .language
-	// 	margin-right: -3px
-	// 	padding-left: 2px
-	// 	padding-right: 0
-	// 	li
-	// 		display: inline-block
-	// 		text-transform: uppercase
-	// 		color: #000
-	// 		font-size: 11px
-	// 		text-align: center
-	// 		+br(50%)
-	// 		border: 3px solid transparent
-	// 		+transition(all .2s linear)
-	// 		a, span
-	// 			display: block
-	// 			text-decoration: none
-	// 			color: inherit
-	// 			vertical-align: top
-	// 			width: 30px
-	// 			height: 30px
-	// 			line-height: 30px
-	// 			+br(50%)
-	// 			+transition(all .2s linear)
-	// 		&.is-active
-	// 			cursor: default
-	// 			a
-	// 				&:hover
-	// 					cursor: default
-	// 		&.is-active, &:hover
-	// 			border: 3px solid rgba(255,255,255,.1)
-	// 			color: #fff
-	// 			a, span
-	// 				background-color: $green
-	// 				+box-shadow(inset 0 1px 0 rgba(255,255,255,.35))
-	.profile
-		.profile__auth
-			li
-				display: inline-block
-				position: relative
-				padding-left: 15px
-				&:before
-					position: absolute
-					top: 50%
-					margin-top: -2px
-					left: 4px
-					background: #656565
-					content: ""
-					width: 4px
-					height: 4px
-					+br(50%)
-				&:first-child
-					padding-left: 0
-					&:before
-						content: none
-		.profile__login
-			.icon_login
-				vertical-align: baseline
-				margin-bottom: -3px
-				padding-right: 11px
 	.adv
 		display: inline-block
 		vertical-align: middle
@@ -123,3 +111,178 @@
 			text-decoration: underline
 			&:hover
 				text-decoration: none
+	.header__field
+		padding: 18px 0 38px
+		line-height: 1.4
+		background-color: #272727
+		+box-shadow(inset 0 -10px 10px rgba(0,0,0,.4))
+		display: none
+		.header-i
+			position: relative
+		.btn-close	
+			position: absolute
+			top: 0
+			right: 0
+			color: $white
+			font-size: 12px
+			font-family: Arial, sans-serif
+			border-color: $white
+	.feedback
+		display: none
+		&.is-active
+			display: block
+	.tab
+		float: left
+		margin-top: 55px
+		width: 280px 
+		overflow: hidden 
+	.tab__link
+		position: relative
+		padding: 0 34px 0 9px
+		height: 40px
+		line-height: 40px
+		font-size: 14px
+		color: $white
+		text-decoration: none
+		display: inline-block  
+		+ofbook
+		+box
+		&:before
+			position: absolute
+			content: ''
+			top: 28px
+			left: 9px
+			right: 34px
+			height: 1px
+			border-bottom: 1px dashed $white
+		&:after
+			position: absolute
+			content: ''
+			top: 0
+			right: -21px
+			display: none
+			+s(arr-btn)
+	.tab__item
+		margin-top: 8px
+		&:first-child
+			margin-top: 0
+		&.is-active
+			.tab__link
+				color: $black
+				+border-radius(5px 0 0 5px)
+				border: none
+				background-color: #fbef03
+				+background-image(linear-gradient(right, #ffba00 0%, #fbef03 100%))
+				&:after
+					display: block
+				&:before
+					display: none
+	.tab-cont
+		float: right
+		width: 70%
+		+ofbook
+	.form
+		color: #666
+		font-size: 12px
+		p
+			margin-bottom: 12px
+		a
+			color: #666
+			&:hover
+				text-decoration: none
+		input, textarea
+			padding: 10px
+			height: 40px
+			width: 100%
+			font-size: 11px
+			+border-radius(2px)
+			border: 1px solid #c8c8c8
+			background-color: #fff
+			display: block
+			+hn
+			+box
+			&:focus
+				outline: none
+		textarea
+			height: 100px
+			resize: none
+		.form__wrap
+			margin-top: 25px
+			padding: 20px
+			background: $white
+			+border-radius(2px)
+		.form__title
+			color: $white
+			font-size: 30px
+			line-height: 1
+			+ofbook
+		.form__select
+			height: 40px
+			border: 1px solid #c8c8c8
+			+border-radius(2px)
+			+background-clip(padding-box)
+			background-color: #fff
+			+background-image(linear-gradient(bottom, #c7c7c7 0%, #f9f9f9 100%))
+			+hn
+		.ui-selectmenu
+			width: 218px !important
+			height: 100%
+			+box
+			ul
+				width: 100%
+		.ui-selectmenu-status
+			padding: 0 9px
+			font-size: 11px
+			color: $black
+			line-height: 40px
+		.ui-selectmenu-icon
+			margin-top: -3px
+			right: 9px
+			+s(arr-sel)
+		.form__row
+			margin-bottom: 18px
+			min-height: 18px
+			color: #999
+			p
+				margin: 0
+				padding-bottom: 5px
+				font-size: 14px
+		.form__row_m8
+			margin-bottom: 8px
+		.form__col
+			margin-right: 20px
+			width: 218px
+			vertical-align: top
+			display: inline-block
+		.form__col_170
+			position: relative
+			height: 40px
+			width: 170px
+			border: 1px solid #c8c8c8
+			border-right: none
+			+box
+			&:before
+				position: absolute
+				content: ''
+				top: -1px
+				right: 0
+				+s(arr-ico)
+		.form__col_140
+			width: 140px
+		.form__col_img
+			background: url(../img/bg-form-col.png) no-repeat 0 0
+	.form__btn, .btn-close
+		color: #999
+		font-size: 13px
+		height: 1.1
+		border: none
+		border-bottom: 1px dashed #999
+		background: none
+		+box
+		+ofbook
+		&:hover
+			border: none
+		&:focus
+			outline: none
+		&:first-letter
+			text-transform: uppercase

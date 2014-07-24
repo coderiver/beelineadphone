@@ -1,78 +1,78 @@
 // footer
 .footer
-	background: #222
-	.footer-i
+	background: #282828
+	.footer-i 
 		+wrap
-		padding: 20px 0 10px
+		padding: 40px 0 20px
 		color: #fff
+	.footer__logo
+		display: inline-block
+		+s(logo_footer) 
+	.footer__content
+		+clr
+		color: #787878
+		a
+			color: #787878
+			text-decoration: underline 
+			&:hover
+				text-decoration: none
+		.footer__title
+			margin-bottom: 30px
+			color: $white
+			+fs(15)
+			line-height: 1
+			text-decoration: underline
+			display: inline-block
+			+ofbook
+			&:hover
+				text-decoration: none
+			&:first-letter
+				text-transform: uppercase
 	.footer__copyright
-		margin-top: 2.6em
+		margin-top: 55px
+		width: 160px
 		color: #666
-		clear: both
 		a
 			color: #666
 			text-decoration: underline
 			&:hover
 				text-decoration: none
-	.footer__content
-		+clr
-		color: #ccc
-		a
-			color: #ccc
-			text-decoration: none
-			&:hover
-				text-decoration: underline
 	.footer__item
 		position: relative
 		float: left
-		margin-left: 20px
-		width: 300px
-		&:before
-			position: absolute
-			bottom: 5px
-			left: -20px
-			height: 100px
-			width: 1px
-			background: #373737
-			content: ""
 		&:first-child
-			margin-left: 0
-			&:before
-				content: none
+			width: 228px
+	.footer__item_center
+		.footer__col
+			width: 170px
+	.footer__item_right
+		float: right
 	.footer__row
 		+clr
 		height: 108px
 	.footer__col
 		float: left
-		width: 140px
-		margin-left: 20px
 		&:first-child
 			margin-left: 0
 		p
 			line-height: 1
-			margin-top: 2.2em
 			&:first-child
 				margin-top: 0
 		li
-			margin-top: 1.2em
+			margin-top: 1em
 			&:first-child
 				margin-top: 0
-	.footer__title
-		text-transform: uppercase
-		color: #fff
-		+fs(12)
-		line-height: 1
-		margin-bottom: 2.2em
+	.footer__col_soc
+		margin-right: 30px
 	.footer__stats
 		display: block
 		+fs(20)
 		margin-bottom: 0.3em
 	.footer__tel
 		+fs(20)
-		color: #fff
 		margin-top: 0
 	.footer__feedback
-		margin-top: .6em
+		margin: 5px 0 20px
 	.footer__socials
 		margin-top: 1em
 		li
@@ -85,12 +85,12 @@
 			a
 				display: block
 				+ht
-				&.footer__socials_gp
-					+s(gp)
-				&.footer__socials_tw
-					+s(tw)
+				&.footer__socials_vk
+					+s(vk)
 				&.footer__socials_fb
 					+s(fb)
+				&.footer__socials_mail
+					+s(mail)
 
 // sticky footer
 .out

@@ -54,11 +54,59 @@ $(document).ready(function() {
 	$(".js-question").click(function(){
 		$(".js-feedback").show();
 		$(".js-top-field").slideDown();
+		$(".js-language").removeClass("is-active");
+		$(".js-password-block").hide();
+		$(".js-login").hide();
+		$(".js-sheet").hide();
 	});
 
 	$(".js-close-field").click(function(){
 		$(".js-feedback").slideUp();
 		$(".js-top-field").slideUp();
+		$(".js-language").removeClass("is-active");
+		$(".js-password-block").hide();
+		$(".js-login").hide();
+		$(".js-sheet").hide();
 	});
 
+	$(".js-personally").click(function(){
+		$(".js-login").show();
+		$(".js-top-field").slideDown();
+		$(".js-language").removeClass("is-active");
+		$(".js-feedback").hide();
+		$(".js-sheet").hide();
+	})
+
+	$(".js-password").click(function(){
+		$(".js-password-block").show();
+		$(".js-language").removeClass("is-active");
+		$(".js-login").hide();
+		$(".js-sheet").hide();
+	})
+
+	$(".js-language").click(function(){
+		$(this).addClass("is-active");
+		$(".js-sheet").show();
+		$(".js-top-field").slideDown();
+		$(".js-password-block").hide();
+		$(".js-feedback").hide();
+		$(".js-login").hide();
+	})
+
+	//validate
+	$("#form").validate({
+        rules: {
+            message: {
+                required: true
+            }
+        },
+		messages:{
+			message:{
+                required: "Ваш вопрос не может быть пустым"
+			}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr("name") == "message") error.insertAfter($("input[name=message]"));
+		}
+	});
 });

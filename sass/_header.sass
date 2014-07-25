@@ -19,6 +19,7 @@
 		border-top: 1px solid #787878
 		+clr
 	.language
+		position: relative
 		float: left
 		width: 45px
 		height: 100%
@@ -29,15 +30,36 @@
 		font-size: 8px
 		font-family: Arial, sans-serif
 		cursor: pointer
+		&:before
+			position: absolute
+			content: ''
+			top: -10px
+			left: 50%
+			margin-left: -10px
+			z-index: 1
+			display: none
+			+arr(20,10, #282828, t)
+		&:after
+			position: absolute
+			content: ''
+			top: -11px
+			left: 50%
+			margin-left: -11px
+			display: none
+			+arr(22,11, #787878, t)
+		&.is-active
+			&:before,
+			&:after
+				display: block
 		.language__item
 			display: none
 			&.is-active
 				display: block
-		.language__ico
-			margin-right: 5px
-			display: inline-block
-		.language__ico_ru
-			+s(ru-flag)
+	.language__ico
+		margin-right: 5px
+		display: inline-block
+	.language__ico_ru
+		+s(ru-flag)
 	.header__cabinet
 		float: right
 	.cabinet
@@ -121,12 +143,19 @@
 			position: relative
 		.btn-close	
 			position: absolute
-			top: 0
+			top: 5px
 			right: 0
 			color: $white
 			font-size: 12px
 			font-family: Arial, sans-serif
 			border-color: $white
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				left: -16px
+				margin-top: -5px
+				+s(close)
 	.feedback
 		display: none
 		&.is-active
@@ -181,6 +210,11 @@
 		float: right
 		width: 70%
 		+ofbook
+	.form__title, .sheet__title
+		color: $white
+		font-size: 30px
+		line-height: 1
+		+ofbook
 	.form
 		color: #666
 		font-size: 12px
@@ -211,11 +245,6 @@
 			padding: 20px
 			background: $white
 			+border-radius(2px)
-		.form__title
-			color: $white
-			font-size: 30px
-			line-height: 1
-			+ofbook
 		.form__select
 			height: 40px
 			border: 1px solid #c8c8c8
@@ -240,6 +269,7 @@
 			right: 9px
 			+s(arr-sel)
 		.form__row
+			position: relative
 			margin-bottom: 18px
 			min-height: 18px
 			color: #999
@@ -247,13 +277,39 @@
 				margin: 0
 				padding-bottom: 5px
 				font-size: 14px
+			.required
+				&.error
+					border: 1px solid #b51333
+				&.error + .error-textarea
+					display: block
+			.error-textarea
+				position: relative
+				margin-top: 10px
+				height: 40px
+				width: 100%
+				line-height: 40px
+				color: $white
+				font-size: 12px
+				text-align: center
+				font-family: Arial, sans-serif
+				background: #b51333
+				display: none
+				&:before
+					position: absolute
+					content: ''
+					left: 50%
+					top: -9px
+					margin-left: -9px
+					+arr(18, 9, #b51333, t)
 		.form__row_m8
 			margin-bottom: 8px
 		.form__col
-			margin-right: 20px
+			margin-left: 20px
 			width: 218px
 			vertical-align: top
 			display: inline-block
+			&:first-child
+				margin-left: 0
 		.form__col_170
 			position: relative
 			height: 40px
@@ -271,6 +327,9 @@
 			width: 140px
 		.form__col_img
 			background: url(../img/bg-form-col.png) no-repeat 0 0
+	.form__col_btn
+		height: 40px
+		line-height: 33px
 	.form__btn, .btn-close
 		color: #999
 		font-size: 13px
@@ -286,3 +345,79 @@
 			outline: none
 		&:first-letter
 			text-transform: uppercase
+	.login__form, .password__form
+		float: right
+		width: 470px
+		.form__title
+			margin-bottom: 15px
+
+	.login
+		display: none
+		// .form__row
+	//checkbox
+	.checkbox
+		position: relative
+		display: inline-block
+		// +unselectable
+		input
+			position: absolute
+			left: 0
+			top: 2px
+			width: 18px
+			height: 18px
+			opacity: 0
+			z-index: 2
+			&:checked
+				+ span
+					&:after
+						display: block
+		span
+			display: inline-block
+			position: relative
+			padding-left: 20px
+			line-height: 1.4
+			color: #c2c2c2
+			font-size: 14px
+			cursor: pointer
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 2px
+				width: 14px
+				height: 14px
+				border: 1px solid #949494
+				+border-radius(2px)
+				background-color: #fbef03
+				+background-image(linear-gradient(bottom, #ffba00 0%, #fbef03 100%))
+				+box
+			&:after
+				display: none
+				content: ""
+				position: absolute
+				top: 4px
+				left: 2px
+				+s(checkbox-pic)
+	.password
+		display: none
+	.sheet
+		float: left
+		margin-left: 40px
+		width: 500px
+		display: none
+	.sheet__title
+		font-size: 41px
+		+ofbold
+	.sheet__wrap
+		margin-top: 25px
+		padding: 14px
+		font-family: Arial, sans-serif
+		background: $white
+		+border-radius(4px)
+		a,.checkbox span
+			text-decoration: underline
+			color: $black
+			&:hover
+				text-decoration: none
+	.sheet__row
+		margin: 15px 0 15px 22px

@@ -41,47 +41,50 @@
 							<div class="tab-cont form js-tab-cont js-tab2">
 								<div class="form__title">Форма обратной связи</div>
 								<div class="form__wrap">
-									<p>Здесь можно задать вопрос, высказать замечание или предложение специалистам услуги «Моя реклама». Советуем обратить внимание на <a href="#">часто задаваемые вопросы.</a></p>
-									<p>Возможно, там есть ответ на Ваш вопрос. Пожалуйста, обратите внимание на выбор темы сообщения, чтобы Ваше письмо сразу же было отправлено сотрудникам соответствующего подразделения сервисного центра услуги «Моя реклама».</p>
-									<div class="form__row">
-										<div class="form__col">
-											<p>Ваше имя</p>
-											<input type="text">
-										</div>
-										<div class="form__col">
-											<p>Адрес электронной почты</p>
-											<input type="text">
-										</div>
-									</div>
-									<div class="form__row">
-										<div class="form__col">
-											<p>Контактный номер телефона</p>
-											<input type="text">
-										</div>
-										<div class="form__col">
-											<p>Тема</p>
-											<div class="form__select">
-												<select name="" id="" class="js-select2">
-													<option value="" selected="selected">Обслуживание</option>
-													<option value="">item</option>
-													<option value="">item</option>
-													<option value="">item</option>
-													<option value="">item</option>
-												</select>
+										<p>Здесь можно задать вопрос, высказать замечание или предложение специалистам услуги «Моя реклама». Советуем обратить внимание на <a href="#">часто задаваемые вопросы.</a></p>
+										<p>Возможно, там есть ответ на Ваш вопрос. Пожалуйста, обратите внимание на выбор темы сообщения, чтобы Ваше письмо сразу же было отправлено сотрудникам соответствующего подразделения сервисного центра услуги «Моя реклама».</p>
+									<form id="form">
+										<div class="form__row">
+											<div class="form__col">
+												<p>Ваше имя</p>
+												<input type="text">
+											</div>
+											<div class="form__col">
+												<p>Адрес электронной почты</p>
+												<input type="text">
 											</div>
 										</div>
-									</div>
-									<div class="form__row">
-										<p>Текст сообщения</p>
-										<textarea></textarea>
-									</div>
-									<div class="form__row form__row_m8">
-										<p>Введите символы с картинки</p>
-										<div class="form__col form__col_170 form__col_img"></div>
-										<div class="form__col form__col_140"><input type="text"></div>
-									</div>
-									<div class="form__row"><button class="form__btn">oбновить капчу</button></div>
-									<button class="btn"><span>Отправить</span></button>
+										<div class="form__row">
+											<div class="form__col">
+												<p>Контактный номер телефона</p>
+												<input type="text">
+											</div>
+											<div class="form__col">
+												<p>Тема</p>
+												<div class="form__select">
+													<select name="" id="" class="js-select2">
+														<option value="" selected="selected">Обслуживание</option>
+														<option value="">item</option>
+														<option value="">item</option>
+														<option value="">item</option>
+														<option value="">item</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="form__row">
+											<label for="text">Текст сообщения</label>
+											<textarea class ="required" id="message" name="message" required></textarea>
+											<label class="error error-textarea" for="message"></label>
+										</div>
+										<div class="form__row form__row_m8">
+											<p>Введите символы с картинки</p>
+											<div class="form__col form__col_170 form__col_img"></div>
+											<div class="form__col form__col_140"><input type="text"></div>
+										</div>
+										<div class="form__row"><button class="form__btn">oбновить капчу</button></div>
+										<button class="btn" type="submit" value="Submit"><span>Отправить</span></button>
+									</form>
 								</div>
 							</div>
 							<!-- END tab content -->
@@ -97,11 +100,90 @@
 							<!-- END tab list -->
 						</div>
 					</div>
+					<div class="login js-login">
+						<div class="login__form form">
+							<h3 class="form__title">Вход в Личный кабинет</h3>
+							<div class="form__row">
+								<div class="form__col">
+									<p>Логин</p>
+									<input type="text">
+								</div>
+								<div class="form__col">
+									<p>Пароль</p>
+									<input type="text">
+								</div>
+							</div>
+							<div class="form__row">
+								<div class="form__col">
+									<label class="form__checkbox checkbox">
+									    <input type="checkbox">
+									    <span>Запомнить меня</span>
+									</label>
+								</div>
+								<div class="form__col">
+									<button class="btn-line js-password">Напомнить пароль</button>
+								</div>
+							</div>
+							<div class="form__row">
+								<p>
+									Логин‭ ‬-‭ ‬Ваш‭ ‬номер телефона в формате‭ ‬0ХХХХХХХХХ<br>
+									Пароль был выслан Вам в SMS при регистрации.‭
+								</p>
+							</div>
+							<div class="form__row">
+								<button class="btn"><span>Вход в личный кабинет</span></button>
+								<div class="form__col form__col_btn"><button class="btn-line">Зарегистрироваться</button></div>
+							</div>
+						</div>
+					</div>
+					<div class="password js-password-block">
+						<div class="password__form form">
+							<h3 class="form__title">Вход в Личный кабинет</h3>
+							<div class="form__row">
+								<div class="form__col">
+									<p>Логин</p>
+									<input type="text">
+								</div>
+							</div>
+							<div class="form__row">
+								<p>
+									В качестве логина используйте Ваш номер телефона<br>
+									Пароль Вы сейчас получите в SMS.
+								</p>
+							</div>
+							<div class="form__row">
+								<button class="btn"><span>Получить пароль</span></button>
+								<div class="form__col form__col_btn"><button class="btn-line">Войти в аккаунт</button></div>
+							</div>
+						</div>
+					</div>
+					<div class="sheet js-sheet">
+						<h3 class="sheet__title">Билайн в других странах</h3>
+						<div class="sheet__wrap">
+							<a href="#"><i class="language__ico language__ico_ru"></i>Beeline.ru</a>
+							<div class="sheet__row">
+								<a href="#">
+									<label class="sheet__checkbox checkbox">
+									    <input type="radio"  checked="checked" name="raz">
+									    <span>на русском языке</span>
+									</label>
+								</a>
+							</div>
+							<div class="sheet__row">
+								<a href="#">
+									<label class="sheet__checkbox checkbox">
+									    <input type="radio" name="raz">
+									    <span>in english</span>
+									</label>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="header__top">
 				<div class="header-i">
-					<div class="header__language language">
+					<div class="header__language language js-language">
 						<div class="language__item is-active"><i class="language__ico language__ico_ru"></i>ru</div>
 						<div class="language__item"><i class="language__ico language__ico_en"></i>en</div>
 					</div>
@@ -349,6 +431,7 @@
 	<script src="js/vendor/jquery.ui.position.js"></script>
 	<script src="js/vendor/jquery.ui.selectmenu.js"></script>
 	<script src="js/vendor/jquery.placeholder.js"></script>
+	<script src="js/jquery.validate.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>

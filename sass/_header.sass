@@ -354,50 +354,6 @@
 	.login
 		display: none
 		// .form__row
-	//checkbox
-	.checkbox
-		position: relative
-		display: inline-block
-		// +unselectable
-		input
-			position: absolute
-			left: 0
-			top: 2px
-			width: 18px
-			height: 18px
-			opacity: 0
-			z-index: 2
-			&:checked
-				+ span
-					&:after
-						display: block
-		span
-			display: inline-block
-			position: relative
-			padding-left: 20px
-			line-height: 1.4
-			color: #c2c2c2
-			font-size: 14px
-			cursor: pointer
-			&:before
-				content: ""
-				position: absolute
-				left: 0
-				top: 2px
-				width: 14px
-				height: 14px
-				border: 1px solid #949494
-				+border-radius(2px)
-				background-color: #fbef03
-				+background-image(linear-gradient(bottom, #ffba00 0%, #fbef03 100%))
-				+box
-			&:after
-				display: none
-				content: ""
-				position: absolute
-				top: 4px
-				left: 2px
-				+s(checkbox-pic)
 	.password
 		display: none
 	.sheet

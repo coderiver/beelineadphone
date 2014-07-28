@@ -13,7 +13,6 @@
 
 ///////////////////////////////// * class-form * ////////////////////////////////
 .select
-	padding: 2px 10px
 	position: relative
 	height: 26px
 	line-height: 30px
@@ -29,7 +28,7 @@
 		border: 1px solid #D7D7D7 
 	span
 		display: block
-		padding: 0px
+		padding: 2px 10px
 		line-height: 26px
 		height: 26px
 		overflow: hidden
@@ -562,12 +561,15 @@
 			border-left: 1px solid #e2e2e2
 			&:first-child
 				border: none
+			.marker
+				margin-left: 9px
 	.checkbox
 		.checkbox__grey
 			position: initial
 			padding: 0
 			height: 14px
 			width: 14px
+			cursor: pointer
 			border: 1px solid #d7d7d7
 			background: $white
 			+box
@@ -634,7 +636,6 @@
 	width: 59px
 .marker
 	position: relative
-	margin-left: 11px
 	width: 10px
 	height: 10px
 	z-index: 1 
@@ -709,21 +710,35 @@
 .calendar
 	position: relative
 	margin: 0 8px
-	padding: 0 9px
 	width: 100px
 	height: 30px
 	font-size: 11px
-	border: 1px solid #d7d7d7 
 	display: inline-block
 	+hn
 	+box
-	i
+	input
+		padding: 0 9px
+		height: 100%
+		width: 100%
+		color: #333333
+		vertical-align: top
+		border: 1px solid #d7d7d7 
+		display: inline-block
+		+box
+		&:focus
+			outline: none
+		+placeholder(#333333)
+	.ui-datepicker-trigger
 		position: absolute
 		top: 50%
-		right: 9px
-		margin-top: -5px
-		cursor: pointer
-		+s(calendar-pic)
+		right: 5px
+		margin-top: -7px
+		border: none
+		background: none
+		display: inline-block
+.ui-datepicker-prev,
+.ui-datepicker-next
+	cursor: pointer
 .table__statistics
 	.th-h3_top
 		&:before
@@ -760,3 +775,9 @@
 .statistics
 	margin: 35px 0
 	
+.js-select-oll
+	display: none
+	&.is-active
+		display: block
+		+ .marker_grey
+			display: none

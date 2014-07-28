@@ -151,4 +151,23 @@ $(document).ready(function() {
 		$('.js-select-other').removeClass('is-open');
 	});
 
+	$("input[type='checkbox']").click(function(){
+		if ($('input:not(:checked)')) {
+			$('.js-select-oll').removeClass('is-active');
+		}
+		if ($('input').is(':checked')) {
+			$('.js-select-oll').addClass('is-active');
+		}
+
+	});
+
+	//datepicker
+	$( "#datepicker, #datepicker2" ).datepicker({
+	    showOn: "both",
+	    buttonImage: "img/icons/calendar-pic.png",
+	    buttonImageOnly: false,
+	    dateFormat: "mm.dd.yy"
+	});
+
+
 });

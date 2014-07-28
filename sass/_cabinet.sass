@@ -502,7 +502,7 @@
 ////////////////////////////  * PAGE cabinet-advertising *  ////////////////////////////////////
 
 .page__content_mod
-	margin-bottom: 30px
+	margin-bottom: 50px
 .topper_bottom
 	margin-bottom: 20px
 .page__row
@@ -516,6 +516,7 @@
 	+box
 .btn_primary-right
 	float: right !important
+	width: 156px !important
 .table__promotion
 	margin-top: 20px
 	width: 100%
@@ -606,19 +607,19 @@
 			transition: all 0.1s linear
 			display: block
 .width1
-	width: 50px
+	width: 70px
 .width2
 	width: 40px
 .width3
-	width: 50px
+	width: 60px
 .width4
-	width: 310px
+	width: 397px
 .width5
-	width: 89px
+	width: 140px
 .width6
-	width: 148px
+	width: 144px 
 .width7
-	width: 89px
+	width: 128px
 .width8
 	width: 84px
 .width2_mod
@@ -651,7 +652,7 @@
 	font-size: 0
 .pagination
 	margin: 0 auto
-	margin-bottom: 45px
+	margin-bottom: 80px
 	text-align: center
 	li
 		position: relative
@@ -700,30 +701,40 @@
 	float: left
 	height: 30px
 	line-height: 30px
+	+hn
 	span
 		vertical-align: top
 	.stage__text
-		padding-right: 15px
+		margin-right: 8px
 .calendar
 	position: relative
+	margin: 0 8px
 	padding: 0 9px
-	width: 138px
-	height: 28px
+	width: 100px
+	height: 30px
 	font-size: 11px
 	border: 1px solid #d7d7d7 
 	display: inline-block
+	+hn
+	+box
 	i
 		position: absolute
-		top: 5px
+		top: 50%
 		right: 9px
+		margin-top: -5px
 		cursor: pointer
 		+s(calendar-pic)
 .table__statistics
-	margin-bottom: 120px
+	.th-h3_top
+		&:before
+			position: absolute
+			content: ''
+			right: 0
+			top: 50% !important
+			margin-top: -7px
+			+s(th-pic)
 	.th-h3
 		padding-right: 6px
-		&:before
-			display: none
 	.ht-top
 		height: 20px
 		line-height: 20px
@@ -738,8 +749,8 @@
 				display: block
 		&:first-child
 			padding: 0
-	.ht-top_blue
-		color: #0096DB 
+	.ht-top_orange
+		color: #ffb612
 		font-size: 16px
 	.ht-top_bord
 		border: none

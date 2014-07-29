@@ -3,20 +3,19 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>PersonalCabinet</title>
+	<title>Index-header</title>
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.js"></script>
 	<![endif]-->
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" media="screen" href="css/screen.css">
-	<link rel="stylesheet" media="screen" href="css/jquery-ui.min.css">
 </head>
 <body>
 	<!-- BEGIN .out -->
 	<div class="out">
 		<!-- BEGIN .header -->
 		<header class="header">
-			<div class="header__field js-top-field">
+			<div class="header__field header__field_mod js-top-field">
 				<div class="header-i">
 					<button class="btn-close js-close-field">Закрыть</button>
 					<div class="feedback js-feedback">
@@ -187,6 +186,13 @@
 							</div>
 						</div>
 					</div>
+					<div class="header__notice notice">
+						<div class="notice__img"><img src="img/notice-img.png" alt="img"></div>
+						<div class="notice__row">Уважаемый пользователь,</div>
+						<div class="notice__row">Личность топ менеджера актаульна как никогда. Управление брендом концентрирует комплексный анализ ситуации, используя опыт предыдущих кампаний. Показ баннера, не меняя концепции, изложенной выше, специфицирует культурный побочный PR-эффект.</div>
+						<a href="#"><i>&mdash;</i> Перейти в раздел Мой Сайт</a>
+						<a class="notice__link" href="#"><i>&mdash;</i> В следующий раз</a>
+					</div>
 				</div>
 			</div>
 			<div class="header__top">
@@ -200,7 +206,7 @@
 							<button class="cabinet__btn cabinet__btn_question js-question"><i class="cabinet__ico"></i>Задать вопрос</button>
 						</div>
 						<div class="cabinet__item">
-							<button class="cabinet__btn cabinet__btn_personally js-personally"><i class="cabinet__ico"></i>Личный кабинет</button>
+							<button class="cabinet__btn cabinet__btn_personally js-personally"><i class="cabinet__ico cabinet__ico_ex"></i>Выйти из кабинета</button>
 						</div>
 					</div>
 				</div>
@@ -227,107 +233,147 @@
 		<!-- BEGIN .search -->
 		<div class="search">
 			<div class="search-i">
-				<div class="search__notice notice">
-					Услуга временно работает в тестовом режиме. Доступна для абонентов Билайн в Москве и Московской области
-				</div>
 				<div class="adphone"><a class="adphone__pic" href="#"></a></div>
+				<div class="search__form">
+					<form action="">
+						<input class="search__input" type="text" placeholder="Что Вы ищите?">
+						<button type="submit" class="search__btn"><i></i></button>
+						<div class="search__select">
+							<select name="" id="" class="js-select">
+								<option value="" selected="selected">Выбрать регион</option>
+								<option value="">item</option>
+								<option value="">item</option>
+								<option value="">item</option>
+								<option value="">item</option>
+							</select>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 		<!-- END .search -->
 
-		<div class="page">
-			<!-- BEGIN .topper -->
-			<div class="topper">
-				<div class="topper-i">
-					<h2 class="topper__title">Личный Кабинет</h2>
-					<nav class="topper__nav">
-						<ul>
-							<li><a href="#">Моя реклама</a></li>
-							<li class="is-active"><a href="#">Статистика</a></li>
-							<li><a href="#">Настройки</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<!-- END .topper -->
-			<!-- BEGIN .page__content l -->
-			<div class="page__content l ">
-				<div class="page__row">
-					<div class="stage"><span class="stage__text">Отчетный период:</span>
-						<div class="calendar"><input id="datepicker" type="text" placeholder="10.03.2014"></div><span> по</span>
-						<div class="calendar"><input id="datepicker2" type="text" placeholder="10.03.2014"></div>
+		<!-- BEGIN .hero -->
+		<section class="hero">
+			<div class="hero-i js-tabs">
+				<ul class="hero__tabs js-tabs-nav">
+					<li class="is-active">
+						<a href="#1">
+							<div class="hero__number">1</div>
+							<div class="hero__text">Подайте объявление</div>
+						</a>
+					</li>
+					<li>
+						<a href="#2">
+							<div class="hero__number">2</div>
+							<div class="hero__text">Разместите в интернете и прессе</div>
+						</a>
+					</li>
+					<li>
+						<a href="#3">
+							<div class="hero__number">3</div>
+							<div class="hero__text">Получите новых клиентов</div>
+						</a>
+					</li>
+				</ul>
+				<div class="hero__content">
+					<div id="1" class="hero__pane js-tabs-pane is-visible">
+						<figure class="hero__picture"><img src="img/phone.png" alt="img"></figure>
+						<article class="hero__article">
+							<h2 class="hero__title">Сколько стоят звонки заинтересованных клиентов?</h2>
+							<div class="hero__text">Бесплатные объявления — удобный рекламный инструмент для вашего бизнеса. Услуга "Моя реклама" увеличивает его эффективность. Больше просмотров, значит больше звонков.</div>
+							<div class="hero__button"><a class="btn" href="#"><span>Добавить объявление</span></a> или звоните 848</div>
+						</article>
 					</div>
-					<a class="btn btn_primary-right" href="#"><span>Экспорт</span></a>
+					<div id="2" class="hero__pane js-tabs-pane">
+						<figure class="hero__picture"><img src="img/phone.png" alt="img"></figure>
+						<article class="hero__article">
+							<h2 class="hero__title hero__title_mod">Находит Ваше контекстное объявление</h2>
+							<div class="hero__text">Организация практического взаимодействия программирует департамент маркетинга и продаж, осознав маркетинг межличностный бизнес-план как часть производства.</div>
+							<div class="hero__button"><a class="btn" href="#"><span>Добавить объявление</span></a> или звоните 848</div>
+						</article>
+					</div>
+					<div id="3" class="hero__pane js-tabs-pane">
+						<figure class="hero__picture"><img src="img/phone.png" alt="img"></figure>
+						<article class="hero__article">
+							<h2 class="hero__title hero__title_mod">Переходит на Ваш сайт чтобы получить подробную информацию и позвонить</h2>
+							<div class="hero__text">Концепция маркетинга неестественно допускает институциональный продуктовый ассортимент, полагаясь на инсайдерскую информацию.</div>
+							<div class="hero__button"><a class="btn" href="#"><span>Добавить объявление</span></a> или звоните 848</div>
+						</article>
+					</div>
 				</div>
-				<div class="statistics">
-					<img src="img/table-pic.png" alt="img">
-				</div>
-				<table class="table__promotion table__statistics">
-					<tr>
-						<th class="ht-top" colspan="5"><h3 class="th-h3 th-h3_top">Мои рекламные компании</h3></th>
-						<th class="ht-top" colspan="4"><h3 class="th-h3 th-h3_top">Звонки</h3></td>
-						<th class="ht-top"><h3 class="th-h3 th-h3_top">Расходы</h3></td>
-					</tr>
-					<tr>
-						<th class="ht-top ht-top_orange" colspan="5">30</th>
-						<th class="ht-top ht-top_orange">135</th>
-						<th class="ht-top ht-top_bord ht-top_orange">12</th>
-						<th class="ht-top ht-top_bord ht-top_orange">6</th>
-						<th class="ht-top ht-top_bord ht-top_orange">153</th>
-						<th class="ht-top ht-top_orange">657</th>
-					</tr>
-					<tr>
-						<th class="width1"> №</th>
-						<th class="width2_mod"><h3 class="th-h3">Заголовок</h3></th>
-						<th class="width3_mod"><h3 class="th-h3">Статус</h3></th>
-						<th class="width4_mod"><h3 class="th-h3">Дата публикации</h3></th>
-						<th class="width5"><h3 class="th-h3">Тариф</h3></th>
-						<th class="width5"><h3 class="th-h3">Целевые</h3></th>
-						<th class="width5"><h3 class="th-h3">Не целевые</h3></th>
-						<th class="width8_mod"><h3 class="th-h3">Пропущенные</h3></th>
-						<th class="width9"><h3 class="th-h3">Всего</h3></th>
-						<th class="width3_mod"><h3 class="th-h3">К оплате</h3></th>
-					</tr>
-					<tr>
-						<td>12345</td>
-						<td><a class="td-advertising" href="#">Регистрация бизнеса</a></td>
-						<td><span class="td-status">Активно</span></td>
-						<td><span class="td-date">23 нояб. 2012</span></td>
-						<td><span class="td-rate">5</span></td>
-						<td><span class="td-rate">45</span></td>
-						<td><span class="td-rate">4</span></td>
-						<td><span class="td-rate">2</span></td>
-						<td><span class="td-rate">51</span></td>
-						<td><span class="td-rate">255</span></td>
-					</tr>
-					<tr>
-						<td>12345</td>
-						<td><a class="td-advertising" href="#">Регистрация бизнеса</a></td>
-						<td><span class="td-status">Активно</span></td>
-						<td><span class="td-date">23 нояб. 2012</span></td>
-						<td><span class="td-rate">5</span></td>
-						<td><span class="td-rate">45</span></td>
-						<td><span class="td-rate">4</span></td>
-						<td><span class="td-rate">2</span></td>
-						<td><span class="td-rate">51</span></td>
-						<td><span class="td-rate">255</span></td>
-					</tr>
-					<tr>
-						<td>12345</td>
-						<td><a class="td-advertising" href="#">Регистрация бизнеса</a></td>
-						<td><span class="td-status">Активно</span></td>
-						<td><span class="td-date">23 нояб. 2012</span></td>
-						<td><span class="td-rate">5</span></td>
-						<td><span class="td-rate">45</span></td>
-						<td><span class="td-rate">4</span></td>
-						<td><span class="td-rate">2</span></td>
-						<td><span class="td-rate">51</span></td>
-						<td><span class="td-rate">255</span></td>
-					</tr>
-				</table>
 			</div>
-			<!-- END .page__content l -->
-		</div>
+			<img src="img/hero-bg.jpg" class="hero-bg">
+			<div class="hero-shadow"></div>
+		</section>
+		<!-- END .hero -->
+
+
+		<!-- BEGIN .info -->
+		<section class="info">
+			<div class="navbar js-navbar">
+				<ul>
+					<li><a href="#about">Как это работает</a></li>
+					<li><a href="#benefits">Преимущества</a></li>
+					<li><a href="#connected">Как подключиться</a></li>
+				</ul>
+			</div>
+			<article id="about" class="about">
+				<h2 class="info__title">Как это работает</h2>
+				<p>ADPHONE продвигает ваши объявления в интернете и прессе. Каждому из них присваивается специальный телефонный номер. Вы оплачивате только поступающие на него целевые звонки и можете сами определить их стоимость. Чем она выше, тем больше звонков вы сможете получить..</p>
+				<div class="info__media">
+					<img src="img/video.jpg" alt="video">
+				</div>
+			</article>
+			<article id="benefits" class="benefits">
+				<h2 class="info__title">Преимущества</h2>
+				<ul class="benefits__list">
+					<li>
+						<div class="benefits__icon"><i class="icon_pay"></i></div>
+						<h2 class="benefits__title">Оплата за результат</h2>
+						<p>Вы оплачиваете только звонки потенциальных клиентов. "Моя реклама" работает без предоплаты, абонплаты и платы за соединение</p>
+					</li>
+					<li>
+						<div class="benefits__icon"><i class="icon_convenience"></i></div>
+						<h2 class="benefits__title">Удобство</h2>
+						<p>Управляйте своими объявлениями через интернет, с мобильного телефона посредство USSD-запросов или позвоните в службу поддержки 848</p>
+					</li>
+					<li>
+						<div class="benefits__icon"><i class="icon_flex"></i></div>
+						<h2 class="benefits__title">Гибкость</h2>
+						<p>Количество объявлений неограничено. Самостоятельно определяйте их статус, географию показа, время получения звонков.</p>
+					</li>
+					<li>
+						<div class="benefits__icon"><i class="icon_control"></i></div>
+						<h2 class="benefits__title">Контроль за расходами</h2>
+						<p>Вы сами устанавливаете стоимость целевых звонков. Оплата взимается только после их получения. Полный отчет о расходах всегда доступен в Личном кабинете.</p>
+					</li>
+					<li>
+						<div class="benefits__icon"><i class="icon_site"></i></div>
+						<h2 class="benefits__title">Сайт-визитка</h2>
+						<p>Получите бесплатно сайт-визитку с информацией о вашем бизнесе, оптимизированный для просмотра с мобильных телефонов.</p>
+					</li>
+				</ul>
+			</article>
+			<article id="connected" class="connected">
+				<h2 class="info__title">Как подключиться</h2>
+				<p>Бизнес-абоненты компании «Билайн» могуть подключить<br> услугу любым из трех удобных способов:</p>
+				<div class="connected__row">
+					<div class="connected__item ">
+						<a class="btn" href="#"><span>Добавить объявление</span></a>
+					</div>
+					<div class="connected__item">
+						<p>Позвоните с мобильного 848</p>
+						<p>Напишите на <a href="mailto:support@adphone.beeline.ru">support@adphone.beeline.ru</a></p>
+						<p>Зарегистрируйтесь в бизнес-каталоге «Билайн»</p>
+					</div>
+				</div>
+				<p>Сейчас мы работаем над тем, чтобы предоставить доступ к услуге <br> и другим и другим категориям абонентов.</p>
+			</article>
+		</section>
+		<!-- END .info -->
+
+
 		<div class="push"></div>
 	</div>
 	<!-- END .out -->
@@ -397,10 +443,9 @@
 	<script src="js/vendor/jquery.ui.core.js"></script>
 	<script src="js/vendor/jquery.ui.widget.js"></script>
 	<script src="js/vendor/jquery.ui.position.js"></script>
+	<script src="js/vendor/jquery.ui.selectmenu.js"></script>
 	<script src="js/vendor/jquery.placeholder.js"></script>
 	<script src="js/jquery.validate.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/vendor/jquery.ui.selectmenu.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>

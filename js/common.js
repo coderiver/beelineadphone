@@ -93,6 +93,7 @@ $(document).ready(function() {
 		$(".js-login").hide();
 	})
 
+
 	//validate
 	$("#form").validate({
         rules: {
@@ -107,9 +108,15 @@ $(document).ready(function() {
 		},
 		errorPlacement: function(error, element) {
 			if (element.attr("name") == "message") error.insertAfter($("input[name=message]"));
+		},
+		submitHandler: function(form) {
+			$(".js-form-wrap").hide();
+			$(".js-message").show();
+			//form.submit();
 		}
 	});
 	
+
 	//select
 	function select() {
 		var el = $('.js-select-other');
@@ -151,22 +158,38 @@ $(document).ready(function() {
 		$('.js-select-other').removeClass('is-open');
 	});
 
-	$("input[type='checkbox']").click(function(){
-		if ($('input:not(:checked)')) {
-			$('.js-select-oll').removeClass('is-active');
-		}
-		if ($('input').is(':checked')) {
-			$('.js-select-oll').addClass('is-active');
-		}
+	$(".checkbox__input").change(function(){
+
+		$('.checkbox__input').each(function() {
+			if($('.checkbox__input:checked').length){
+				$('.js-select-oll').addClass('is-active');
+			}
+			else {
+				$('.js-select-oll').removeClass('is-active');
+			}
+		});
 
 	});
 
-	//datepicker
+	$("#maincb").change(function(){
+		$('.js-select-oll').toggleClass('is-active');
+	});
+	
+	$('#maincb').on('change', function(){
+		if ($(this).is(':checked'))
+			$('.checkbox__input').each(function(){
+			    this.checked = true;
+			});
+		else
+			$('.checkbox__input').removeAttr('checked');
+	});
+	
+	datepicker
 	$( "#datepicker, #datepicker2" ).datepicker({
-	    showOn: "both",
-	    buttonImage: "img/icons/calendar-pic.png",
-	    buttonImageOnly: false,
-	    dateFormat: "mm.dd.yy"
+		showOn: "both",
+		buttonImage: "img/icons/calendar-pic.png",
+		buttonImageOnly: false,
+		dateFormat: "mm.dd.yy"
 	});
 
 

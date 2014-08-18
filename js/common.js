@@ -58,6 +58,7 @@ $(document).ready(function() {
 		$(".js-password-block").hide();
 		$(".js-login").hide();
 		$(".js-sheet").hide();
+		$(".notice-hide").hide();
 	});
 
 	$(".js-close-field").click(function(){
@@ -67,6 +68,7 @@ $(document).ready(function() {
 		$(".js-password-block").hide();
 		$(".js-login").hide();
 		$(".js-sheet").hide();
+		$(".notice-hide").hide();
 	});
 
 	$(".js-personally").click(function(){
@@ -75,6 +77,7 @@ $(document).ready(function() {
 		$(".js-language").removeClass("is-active");
 		$(".js-feedback").hide();
 		$(".js-sheet").hide();
+		$(".notice-hide").hide();
 	})
 
 	$(".js-password").click(function(){
@@ -82,6 +85,7 @@ $(document).ready(function() {
 		$(".js-language").removeClass("is-active");
 		$(".js-login").hide();
 		$(".js-sheet").hide();
+		$(".notice-hide").hide();
 	})
 
 	$(".js-language").click(function(){
@@ -91,6 +95,7 @@ $(document).ready(function() {
 		$(".js-password-block").hide();
 		$(".js-feedback").hide();
 		$(".js-login").hide();
+		$(".notice-hide").hide();
 	})
 
 

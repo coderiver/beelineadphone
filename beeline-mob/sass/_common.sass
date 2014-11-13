@@ -1,0 +1,223 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
++font(Helvetica-Neue, helveticaneuecyr-roman-webfont)  
+=hn
+	font-family: "Helvetica-Neue", Arial, sans-serif 
+
++font(OfficinaSerif-Bold, officinaserifc-bold-webfont)  
+=osb
+	font-family: "OfficinaSerif-Bold", Arial, sans-serif 
+
++font(OfficinaSerif-Boock, officinaserifc-book-webfont)  
+=osbook
+	font-family: "OfficinaSerif-Boock", Arial, sans-serif 
+
+
+body
+	color: #666
+	font-family: Arial, sans-serif 
+	font-size: 12px 
+	line-height: 1.4
+
+
+// common blocks      
+//out
+.out
+	min-width: 320px
+	max-width: 480px
+
+//header
+.header
+	margin-bottom: 10px
+	padding: 10px 0
+	height: 80px
+	font-size: 0
+	border-bottom: 1px solid #eee
+	+box
+	.header__left
+		padding-right: 10px
+		width: 48%
+		text-align: right
+	.header__logo
+		+s(logo-mob)
+	.header__right
+		padding-left: 10px
+		width: 52%
+		border-left: 1px solid #eee
+	.header__left, .header__right
+		height: 60px
+		line-height: 60px
+		vertical-align: top
+		+box
+	.header__name
+		+s(adphone)
+	.header__logo, .header__name
+		vertical-align: middle
+	.header__logo, .header__right, .header__left, .header__name
+		display: inline-block
+
+//container
+.container
+	p
+		padding: 0 10px
+
+//title
+.title
+	font-size: 21px
+.title-2
+	font-size: 20px
+.title-3
+	font-size: 18px
+.title, .title-2, .title-3
+	padding: 16px 10px 25px
+	color: #333
+	line-height: 1.2
+	text-align: center
+	+box
+	+osb
+
+//btn
+.btn
+	height: 35px
+	line-height: 35px
+	background: #be8145
+	display: inline-block
+	+border-radius(18px)
+	border: none
+	+transition(all .1s linear)
+	span
+		padding: 10px 28px 6px
+		width: 100%
+		height: 30px
+		color: #000
+		line-height: 1
+		+osbook
+		font-size: 15px
+		text-align: center
+		vertical-align: top
+		+box-shadow(0 0 0 1px rgba(255,255,255,.5))
+		border-top: none
+		+border-radius(16px)
+		background-color: #fbef03
+		+background-image(linear-gradient(bottom, #ffba00 0%, #fbef03 100%))
+		display: inline-block
+		+box
+	&:hover
+		background: darken(#be8145, 5)
+	&:active
+		span
+			+box-shadow(inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05))
+
+//banner
+.banner
+	margin: 15px 0 18px
+	border-bottom: 1px solid #ccc
+	border-top: 1px solid #ccc
+	img
+		width: 100%
+		display: block
+
+//action
+.action
+	margin-top: 20px
+	padding: 0 10px
+	border-top: 1px solid #eee
+	border-bottom: 1px solid #eee
+	+box
+	.action__item
+		position: relative
+		padding: 0 0 0 60px
+		margin-bottom: 18px
+		height: 50px
+		line-height: 50px
+	.action__step
+		position: absolute
+		top: 0
+		left: 0
+		height: 50px
+		width: 50px
+		color: #fff
+		font-size: 24px
+		line-height: 50px
+		text-align: center
+		+border-radius(50%)
+		background: #282828
+		+osb
+	.action__text
+		display: inline-block
+		line-height: 1.4
+		vertical-align: middle
+
+//contactus
+.contactus
+	padding-bottom: 10px
+	.contactus__wrap
+		padding-bottom: 15px
+		text-align: center
+	.contactus__row
+		margin: 0 0 15px
+	p
+		margin-top: 15px
+
+//footer
+.footer
+	height: 60px
+	line-height: 60px
+	text-align: center
+	background: #282828
+	.footer__copy, .footer__link
+		color: #787878
+		font-size: 12px
+		display: inline-block
+		+hn
+	.footer__link
+		text-decoration: none
+		&:hover
+			text-decoration: underline

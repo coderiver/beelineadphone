@@ -25,7 +25,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: OfficinaSerif-Boock; src: url("fonts/officinaserifc-book-webfont.eot"); src: url("fonts/officinaserifc-book-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/officinaserifc-book-webfont.woff") format("woff"), url("fonts/officinaserifc-book-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { color: #666666; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 
-.out { min-width: 320px; max-width: 480px; }
+.out { margin: 0 0 -60px; min-width: 320px; min-height: 100%; height: auto !important; height: 100%; }
 
 .header { margin-bottom: 10px; padding: 10px 0; height: 80px; font-size: 0; border-bottom: 1px solid #eeeeee; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .header .header__left { padding-right: 10px; width: 48%; text-align: right; }
@@ -63,6 +63,8 @@ body { color: #666666; font-family: Arial, sans-serif; font-size: 12px; line-hei
 .contactus .contactus__wrap { padding-bottom: 15px; text-align: center; }
 .contactus .contactus__row { margin: 0 0 15px; }
 .contactus p { margin-top: 15px; }
+
+.footer, .push { height: 60px; }
 
 .footer { height: 60px; line-height: 60px; text-align: center; background: #282828; }
 .footer .footer__copy, .footer .footer__link { color: #787878; font-size: 12px; display: inline-block; font-family: "Helvetica-Neue", Arial, sans-serif; }

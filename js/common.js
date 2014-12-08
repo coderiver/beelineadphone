@@ -184,13 +184,21 @@ $(document).ready(function() {
 			$('.checkbox__input').removeAttr('checked');
 	});
 	
-	datepicker
-	$( "#datepicker, #datepicker2" ).datepicker({
-		showOn: "both",
-		buttonImage: "img/icons/calendar-pic.png",
-		buttonImageOnly: false,
-		dateFormat: "mm.dd.yy"
-	});
+	//datepicker
+	// $( "#datepicker, #datepicker2" ).datepicker({
+	// 	showOn: "both",
+	// 	buttonImage: "img/icons/calendar-pic.png",
+	// 	buttonImageOnly: false,
+	// 	dateFormat: "mm.dd.yy"
+	// });
 
+	//slideshow
+	$(".advertisement__slider").cycle({
+		fx: 'fade',
+		timeout: 2000,
+		slides: '.advertisement__slide',
+		next: '.advertisement__next',
+		prev: '.advertisement__prev'
+	});
 
 });

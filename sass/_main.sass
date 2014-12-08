@@ -2,44 +2,13 @@
 	// border: 1px solid red
 	// +box-shadow(0px 0px 1px 1px red)
 
-//fonts
-@font-face
-	font-family: 'HelveticaNeue'
-	src: url('../fonts/helveticaneuecyr-roman-webfont.eot')
-	src: local('__'), url('../fonts/helveticaneuecyr-roman-webfont.woff') format('woff'), url('../fonts/helveticaneuecyr-roman-webfont.ttf') format('ttf')
-	font-weight: normal
-	font-style: normal
-
-@font-face
-	font-family: 'OfficinaSeriFC-Bold'
-	src: url('../fonts/officinaserifc-bold-webfont.eot')
-	src: local('__'), url('../fonts/officinaserifc-bold-webfont.woff') format('woff'), url('../fonts/officinaserifc-bold-webfont.ttf') format('ttf')
-	font-weight: normal
-	font-style: normal
-
-@font-face
-	font-family: 'OfficinaSeriFC-Book'
-	src: url('../fonts/officinaserifc-book-webfont.eot')
-	src: local('__'), url('../fonts/officinaserifc-book-webfont.woff') format('woff'), url('../fonts/officinaserifc-book-webfont.ttf') format('ttf')
-	font-weight: normal
-	font-style: normal
-
-=hn
-	font-family: "HelveticaNeue", Arial, sans-serif 
-
-=ofbold
-	font-family: "OfficinaSeriFC-Bold", Arial, sans-serif 
-
-=ofbook
-	font-family: "OfficinaSeriFC-Book", Arial, sans-serif 
-
 // colors
 $darkgrey: #c5c5c5
 $blue: #0096db
 $dark: #333
 $green: #4db21d
 $black: #000
-$grey: #333333
+$grey: #f5f5f5
 $white: #fff
 $orange: #ffb612
 
@@ -50,9 +19,10 @@ $orange: #ffb612
 
 =b-box
 	+br(2px)
-	border: 1px solid #eee
+	border: 1px solid #c8c8c8
 	margin-bottom: 20px
 .box
+	background: #fff
 	+b-box
 
 
@@ -170,18 +140,19 @@ button
 						background: #fff
 
 .breadcrumb
-	margin-bottom: 20px
+	margin: 24px 0 16px
 	li
 		display: inline-block
 		a, span
-			color: #666
+			color: #787878
+			font-style: italic
 		a
-			text-decoration: none
+			text-decoration: underline
 			&:hover
-				text-decoration: underline
-		&.is-active
-			a, span
-				color: #999
+				text-decoration: none
+		// &.is-active
+		// 	a, span
+		// 		color: #999
 
 .box
 	&.box_slide
@@ -195,7 +166,7 @@ button
 			cursor: pointer
 			border: none
 		.box__content
-			border-top: 1px solid #eee
+			border-top: 1px solid #c8c8c8
 			display: none
 	&.box_map
 		&.is-editable
@@ -203,7 +174,7 @@ button
 				display: block
 		.box__content
 			padding: 0
-			height: 208px
+			height: 150px
 			overflow: hidden
 		.box__edit
 			display: none
@@ -218,7 +189,7 @@ button
 		position: relative
 		background: $grey
 		padding: 10px
-		border-bottom: 1px solid #eee
+		border-bottom: 1px solid #c8c8c8
 		[class^="icon_"], [class*=" icon_"]
 			margin-right: 10px
 		.icon_arrow
@@ -254,7 +225,7 @@ button
 		+fs(18)
 		font-weight: bold
 		text-align: center
-		border-bottom: 1px solid #eee
+		border-bottom: 1px solid #c8c8c8
 		padding: 10px
 		background: #fff
 		[class^="icon_"], [class*=" icon_"]

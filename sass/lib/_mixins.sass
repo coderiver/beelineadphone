@@ -7,12 +7,12 @@
 	text-shadow: none
 	color: transparent
 
-@mixin clr
-	&:before, &:after
-		content: ""
-		display: table
+=clr
 	&:after
+		content: " "
+		display: table
 		clear: both
+	*zoom: 1
 
 @mixin placeholder($color)
 	&:-moz-placeholder,

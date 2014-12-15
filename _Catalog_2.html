@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>PersonalCabinet</title>
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.js"></script>
+	<![endif]-->
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" media="screen" href="css/screen.css">
+</head>
+<body>
+	<!-- BEGIN .out -->
+	<div class="out">
+		<!-- BEGIN .header -->
+		<header class="header">
+			<div class="header__field js-top-field">
+				<div class="header-i">
+					<button class="btn-close js-close-field">Закрыть</button>
+					<div class="feedback js-feedback">
+						<div class="js-tab-group">
+							<!-- tab content -->
+							<div class="tab-cont form js-tab-cont js-tab1">
+								<div class="form__title">Обратный звонок</div>
+								<div class="form__wrap">
+									<p>Производство, анализируя результаты рекламной кампании, стабилизирует институциональный имидж предприятия. Целевой трафик, суммируя приведенные примеры, конкурентоспособен.</p>
+									<div class="form__row">
+										<div class="form__col">
+											<p>Ваше имя</p>
+											<input type="text">
+										</div>
+										<div class="form__col">
+											<p>Контактный номер телефона</p>
+											<input type="text">
+										</div>
+									</div>
+									<button class="btn"><span>Заказать звонок</span></button>
+								</div>
+							</div>
+							<div class="tab-cont form js-tab-cont js-tab2">
+								<div class="form__title">Форма обратной связи</div>
+								<div class="form__wrap">
+									<div class="js-form-wrap">
+										<p>Здесь можно задать вопрос, высказать замечание или предложение специалистам услуги «Моя реклама». Советуем обратить внимание на <a href="#">часто задаваемые вопросы.</a></p>
+										<p>Возможно, там есть ответ на Ваш вопрос. Пожалуйста, обратите внимание на выбор темы сообщения, чтобы Ваше письмо сразу же было отправлено сотрудникам соответствующего подразделения сервисного центра услуги «Моя реклама».</p>
+										<form id="form">
+											<div class="form__row">
+												<div class="form__col">
+													<p>Ваше имя</p>
+													<input type="text">
+												</div>
+												<div class="form__col">
+													<p>Адрес электронной почты</p>
+													<input type="text">
+												</div>
+											</div>
+											<div class="form__row">
+												<div class="form__col">
+													<p>Контактный номер телефона</p>
+													<input type="text">
+												</div>
+												<div class="form__col">
+													<p>Тема</p>
+													<div class="form__select">
+														<select name="" id="" class="js-select2">
+															<option value="" selected="selected">Обслуживание</option>
+															<option value="">item</option>
+															<option value="">item</option>
+															<option value="">item</option>
+															<option value="">item</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form__row">
+												<label for="text">Текст сообщения</label>
+												<textarea class ="required" id="message" name="message" required></textarea>
+												<label class="error error-textarea" for="message"></label>
+											</div>
+											<div class="form__row form__row_m8">
+												<p>Введите символы с картинки</p>
+												<div class="form__col form__col_170 form__col_img"></div>
+												<div class="form__col form__col_140"><input type="text"></div>
+											</div>
+											<div class="form__row"><button class="form__btn">oбновить капчу</button></div>
+											<button class="btn js-btn-message" type="submit" value="Submit"><span>Отправить</span></button>
+										</form>
+									</div>
+									<div class="message js-message">
+										<div class="message__img"><img src="img/message-img.png" alt="img"></div>
+										<div class="message__row">Благодарим за сообщение!</div>
+										<div class="message__row">Ваше обращение будет принято к рассмотрению. Мы ответим по указанному <br>Вами email адресу в течении трех рабочих дней.</div>
+									</div>
+								</div>
+							</div>
+							<!-- END tab content -->
+							<!-- tab list -->
+							<ul class="tab js-tab">
+								<li class="tab__item">
+									<a href="js-tab1" class="tab__link">Заказать обратный звонок</a>
+								</li>
+								<li class="tab__item">
+									<a href="js-tab2" class="tab__link js-tab-chow">Обратная связь</a>
+								</li>
+							</ul>
+							<!-- END tab list -->
+						</div>
+					</div>
+					<div class="login js-login">
+						<div class="login__form form">
+							<h3 class="form__title">Вход в Личный кабинет</h3>
+							<div class="form__row">
+								<div class="form__col">
+									<p>Логин</p>
+									<input type="text">
+								</div>
+								<div class="form__col">
+									<p>Пароль</p>
+									<input type="text">
+								</div>
+							</div>
+							<div class="form__row">
+								<div class="form__col">
+									<label class="form__checkbox checkbox">
+									    <input type="checkbox">
+									    <span>Запомнить меня</span>
+									</label>
+								</div>
+								<div class="form__col">
+									<button class="btn-line js-password">Напомнить пароль</button>
+								</div>
+							</div>
+							<div class="form__row">
+								<p>
+									Логин‭ ‬-‭ ‬Ваш‭ ‬номер телефона в формате‭ ‬0ХХХХХХХХХ<br>
+									Пароль был выслан Вам в SMS при регистрации.‭
+								</p>
+							</div>
+							<div class="form__row">
+								<button class="btn"><span>Вход в личный кабинет</span></button>
+								<div class="form__col form__col_btn"><button class="btn-line">Зарегистрироваться</button></div>
+							</div>
+						</div>
+					</div>
+					<div class="password js-password-block">
+						<div class="password__form form">
+							<h3 class="form__title">Вход в Личный кабинет</h3>
+							<div class="form__row">
+								<div class="form__col">
+									<p>Логин</p>
+									<input type="text">
+								</div>
+							</div>
+							<div class="form__row">
+								<p>
+									В качестве логина используйте Ваш номер телефона<br>
+									Пароль Вы сейчас получите в SMS.
+								</p>
+							</div>
+							<div class="form__row">
+								<button class="btn"><span>Получить пароль</span></button>
+								<div class="form__col form__col_btn"><button class="btn-line">Войти в аккаунт</button></div>
+							</div>
+						</div>
+					</div>
+					<div class="sheet js-sheet">
+						<h3 class="sheet__title">Билайн в других странах</h3>
+						<div class="sheet__wrap">
+							<a href="#"><i class="language__ico language__ico_ru"></i>Beeline.ru</a>
+							<div class="sheet__row">
+								<a href="#">
+									<label class="sheet__checkbox checkbox">
+									    <input type="radio"  checked="checked" name="raz">
+									    <span>на русском языке</span>
+									</label>
+								</a>
+							</div>
+							<div class="sheet__row">
+								<a href="#">
+									<label class="sheet__checkbox checkbox">
+									    <input type="radio" name="raz">
+									    <span>in english</span>
+									</label>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__top">
+				<div class="header-i">
+					<div class="header__language language js-language">
+						<div class="language__item is-active"><i class="language__ico language__ico_ru"></i>ru</div>
+						<div class="language__item"><i class="language__ico language__ico_en"></i>en</div>
+					</div>
+					<div class="header__cabinet cabinet">
+						<div class="cabinet__item">
+							<button class="cabinet__btn cabinet__btn_question js-question"><i class="cabinet__ico"></i>Задать вопрос</button>
+						</div>
+						<div class="cabinet__item">
+							<button class="cabinet__btn cabinet__btn_personally js-personally"><i class="cabinet__ico"></i>Личный кабинет</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-i">
+				<a class="header__logo" href="#">Киевстар</a>
+				<div class="header__toolbar">
+					<div class="adv">
+						<a class="adv__btn" href="#"><span>Добавить объявление</span></a>
+					</div>
+				</div>
+				<ul class="header__menu">
+					<li><a href="#">Об услуге</a></li>
+					<li><a href="#">Тарифы</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Помощь</a></li>
+				</ul>
+			</div>
+		</header>
+		<!-- END .header -->
+		<!-- BEGIN .search -->
+		<div class="search">
+			<div class="search-i">
+				<div class="search__notice notice">
+					Услуга временно работает в тестовом режиме. Доступна для абонентов Билайн в Москве и Московской области
+				</div>
+				<div class="adphone"><a class="adphone__pic" href="#"></a></div>
+			</div>
+		</div>
+		<!-- END .search -->
+
+		<div class="page">
+			<div class="l">
+				<ul class="breadcrumb">
+					<li><a href="#">Главная</a> <span class="divider">/</span></li>
+					<li><a href="#">Каталог</a> <span class="divider">/</span></li>
+					<li><a href="#">Бизнес</a> <span class="divider">/</span></li>
+					<li><a href="#">Строительство</a></li>
+				</ul>
+				<div class="l-main">
+					<div class="l-white">
+						<div class="l-row"></div>
+					</div>
+				</div>
+				<aside class="page__sidebar l-sidebar">
+					<div class="add-advert">
+						<div class="add-advert__img">
+							<img src="img/add-advert.png" alt="img">
+						</div>
+						<h3 class="add-advert__title">Добавить объявление</h3>
+						<div class="add-advert__text">Внимание на то, что осознаёт комплекс, что вызвало идентификация.</div>
+						<a class="btn" href="#"><span>Добавить объявление</span></a>
+					</div>
+					<div class="tags">
+						<h3 class="tags__title">Популярные теги</h3>
+						<div class="tags__wrap">
+							<a href="#" class="tags__item">Аренда квартир<span>320</span></a>
+							<a href="#" class="tags__item">Аренда земли<span>33</span></a>
+							<a href="#" class="tags__item">Продажа домов<span>64</span></a>
+							<a href="#" class="tags__item">Аренда земли<span>218</span></a>
+							<a href="#" class="tags__item">Отделочные материалы<span>320</span></a>
+							<a href="#" class="tags__item">Вода <span>36</span></a>
+							<a href="#" class="tags__item">Аренда квартир<span>320</span></a>
+							<a href="#" class="tags__item">Аренда земли<span>33</span></a>
+							<a href="#" class="tags__item">Продажа домов<span>64</span></a>
+							<a href="#" class="tags__item">Аренда земли<span>218</span></a>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+		<div class="push"></div>
+	</div>
+	<!-- END .out -->
+
+	<!-- BEGIN .footer -->
+	<footer class="footer">
+		<div class="footer-i">
+			<div class="footer__content">
+				<div class="footer__item">
+					<a href="#" class="footer__logo"></a>
+					<div class="footer__copyright">
+						<p>Билайн © 2014.</p>
+						<a href="#">Сайт является средством
+						массовой информации.</a>
+					</div>
+				</div>
+				<div class="footer__item footer__item_center">
+					<a href="#" class="footer__title">Каталог</a>
+					<div class="footer__row">
+						<ul class="footer__col">
+							<li><a href="#">Бизнес</a></li>
+							<li><a href="#">Домашние животные и зоотовары</a></li>
+							<li><a href="#">Мода и стиль</a></li>
+							<li><a href="#">Недвижимость</a></li>
+						</ul>
+						<ul class="footer__col">
+							<li><a href="#">Работа</a></li>
+							<li><a href="#">Товары для детей</a></li>
+							<li><a href="#">Товары для дома и сада</a></li>
+							<li><a href="#">Транспорт</a></li>
+						</ul>
+						<ul class="footer__col">
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Хобби, отдых и спорт</a></li>
+							<li><a href="#">Электроника</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__item footer__item_right">
+					<a href="#" class="footer__title">Информация</a>
+					<div class="footer__row">
+						<div class="footer__col footer__col_soc">
+							<p class="footer__tel">(499) 277 77 77</p>
+							<p class="footer__feedback"><a href="#">Обратная связь</a></p>
+							<ul class="footer__socials">
+								<li><a class="footer__socials_vk"href="#">vk</a></li>
+								<li><a class="footer__socials_fb"href="#">fb</a></li>
+								<li><a class="footer__socials_mail"href="#">mail</a></li>
+							</ul>
+						</div>
+						<div class="footer__col">
+							<ul>
+								<li><a href="#">Об услуге</a></li>
+								<li><a href="#">Партнёрам</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">Помощь</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- END .footer -->
+
+	<script src="js/vendor/jquery-1.10.2.min.js"></script>
+	<script src="js/vendor/jquery.ui.core.js"></script>
+	<script src="js/vendor/jquery.ui.widget.js"></script>
+	<script src="js/vendor/jquery.ui.position.js"></script>
+	<script src="js/vendor/jquery.ui.selectmenu.js"></script>
+	<script src="js/vendor/jquery.placeholder.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/lib/cycle.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>

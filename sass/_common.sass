@@ -244,11 +244,6 @@ input[type="submit"]::-moz-focus-inner
 	background: #eeeae5
 //advertisement
 .advertisement
-	.advertisement__row
-		padding: 39px 31px 23px
-		border-top: 1px solid #c8c8c8
-		&:first-child
-			border: none
 	.title
 		padding-bottom: 18px
 		font-size: 18px
@@ -327,6 +322,13 @@ input[type="submit"]::-moz-focus-inner
 		padding: 16px 40px 0 60px
 		+ofbook
 
+
+.l-row, .advertisement__row
+	padding: 39px 31px 23px
+	border-top: 1px solid #c8c8c8
+	&:first-child
+		border: none
+
 //like
 .like
 	padding: 0 10px
@@ -398,3 +400,58 @@ input[type="submit"]::-moz-focus-inner
 	.catalog__title
 		font-size: 16px
 		+ofbook
+
+//add-advert
+.add-advert
+	margin-bottom: 40px
+	padding: 42px 26px 24px
+	text-align: center
+	border: 1px dashed #787878
+	.add-advert__img
+		img
+			display: block
+	.add-advert__title
+		margin: 18px 0 8px
+	.add-advert__text
+		margin-bottom: 15px
+		width: 172px
+		font-size: 12px
+		+hn
+	.add-advert__img,
+	.add-advert__title,
+	.add-advert__text
+		display: inline-block
+
+.tags__title, .add-advert__title
+	color: #000
+	font-size: 18px
+	+ofbook
+
+
+//tags
+.tags
+	.tags__wrap
+		margin-top: 20px
+		padding: 10px 10px 0 0
+		border: 1px solid #c8c8c8
+		background: #fff
+		font-size: 0
+		+border-radius(2px)
+		+box
+	.tags__item
+		margin: 0 0 10px 10px
+		padding: 2px 4px
+		color: #333
+		font-size: 11px
+		text-decoration: none
+		+hn
+		border: 1px solid #c8c8c8
+		background: #fafafa
+		display: inline-block
+		+transition(all 0.2s linear)
+		&:hover
+			background: #eeeae5
+		span
+			margin-left: 5px
+			color: #333
+			display: inline-block
